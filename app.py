@@ -73,7 +73,7 @@ def predict():
         img_base64.save(f'static/{img_filename}', format='JPEG')
         if pred == 'ambulance':
             output = "Green Signal! Since Ambulance Detected! "
-            return render_template("result.html",output = output)
+            return render_template("result.html",output = output,img_filename=img_filename)
 
         else:
             if dens <= 20:
